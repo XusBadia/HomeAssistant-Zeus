@@ -1118,4 +1118,4 @@ async function getIcon(name) {
   };
 }
 window.customIconsets = window.customIconsets || {};
-window.customIconsets["phu"] = getIcon;
+window.customIconsets["zeus"] = getIcon;
