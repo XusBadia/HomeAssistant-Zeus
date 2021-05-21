@@ -1,0 +1,1 @@
+# Contribute to the project by adding other icons
