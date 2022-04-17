@@ -1114,12 +1114,27 @@ var icns = {
 };
 
 async function getIcon(name) {
+    if (!(name in icns)) {
+        console.log(`Icon "${name}" not available`);
+        return '';
+    }
+
     var svgDef = icns[name];
     var primaryPath = svgDef[4];
-  return {
-    path: primaryPath,
+    return {
+        path: primaryPath,
         viewBox:  svgDef[0] +" " + svgDef[1] + " " + svgDef[2] + " " + svgDef[3]
-  };
+    }
 }
+
+async function getIconList() {
+    return Object.entries(icns).map(([icon]) => ({
+        name: icon
+    }));
+}
+
 window.customIconsets = window.customIconsets || {};
 window.customIconsets["zeus"] = getIcon;
+
+window.customIcons = window.customIcons || {};
+window.customIcons["zeus"] = { getIcon, getIconList };
