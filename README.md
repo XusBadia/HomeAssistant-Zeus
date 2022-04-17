@@ -18,7 +18,7 @@ Here's a cheatsheet with all the icon names: [Zeus Icon Set Cheatsheet](https://
 
 ## HACS
 
-I recommend installing Custom brand icons card via [Home Assistant Community Store](https://hacs.xyz)
+I recommend installing Zeus Icon Set via [Home Assistant Community Store](https://hacs.xyz)
  
  1. Add the folowing to the `frontend` section of your `configuration.yaml`
 
