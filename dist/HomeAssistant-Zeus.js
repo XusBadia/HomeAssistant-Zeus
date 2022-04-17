@@ -1,4 +1,4 @@
-var icns = {
+var ZEUS_ICONS_MAP = {
     // 3.2 - 1109 Icons
     "playcircle": {
         path:"M16,2 C23.7319865,2 30,8.2680135 30,16 C30,23.7319865 23.7319865,30 16,30 C8.2680135,30 2,23.7319865 2,16 C2,8.2680135 8.2680135,2 16,2 Z M22.8156869,16.0081245 C22.8156869,15.1909876 13.2752159,9.31462761 12.5239498,10.0662315 C11.772346,10.8174975 11.8804418,21.3068474 12.5239498,21.9500176 C13.1674579,22.5935256 22.8156869,16.8255993 22.8156869,16.0081245 Z",
@@ -4441,16 +4441,16 @@ var icns = {
 };
 
 async function getIcon(name) {
-    if (!(name in icns)) {
-        console.log(`Icon "${name}" not available`);
+    if (!(name in ZEUS_ICONS_MAP)) {
+        console.log(`Icon "${name}" is not available`);
         return '';
     }
 
-    return {path: icns[name].path};
+    return {path: ZEUS_ICONS_MAP[name].path};
 }
 
 async function getIconList() {
-  return Object.entries(icns).map(([icon, content]) => ({
+  return Object.entries(ZEUS_ICONS_MAP).map(([icon, content]) => ({
     name: icon,
     keywords: content.keywords,
   }));
